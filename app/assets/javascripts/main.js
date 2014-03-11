@@ -22,11 +22,17 @@ var StoreFront = angular.module('StoreFront',['ngRoute']);
 StoreFront.config(['$routeProvider', function($routeProvider){
     // Route to retrieve one product
     // '/product/:productId
+
+
+    $routeProvider.when('/product/new',{
+        templateUrl: '../assets/mainCreateProduct.html',
+        controller: 'CreateProductCtrl'
+    });
+
     $routeProvider.when('/product/:productId',{
         templateUrl: '../assets/mainProduct.html',
         controller: 'ProductCtrl'
     });
-
 
     // Default Route
     $routeProvider.otherwise({
