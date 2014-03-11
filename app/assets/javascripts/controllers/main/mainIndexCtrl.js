@@ -1,4 +1,5 @@
 var IndexCtrl = function($scope, $location, $http, productData){
+
     $scope.data = productData;
     productData.loadProducts();
 
@@ -9,4 +10,6 @@ var IndexCtrl = function($scope, $location, $http, productData){
     $scope.navNewProduct = function(){
         $location.url('/product/new');
     };
+
+    return productData;
 };

@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+<<<<<<< HEAD
 gem 'rails', '4.0.3'
 
 gem 'pg'
@@ -11,6 +12,23 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
 
+=======
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '4.0.3'
+
+# Use postgresql as the database for Active Record
+gem 'pg'
+
+# Use SCSS for stylesheets
+gem 'sass-rails', '~> 4.0.0'
+
+# Use Uglifier as compressor for JavaScript assets
+gem 'uglifier', '>= 1.3.0'
+
+# Use CoffeeScript for .js.coffee assets and views
+gem 'coffee-rails', '~> 4.0.0'
+
+>>>>>>> 0066b905c63ce1a88ba1da566db6da7e46a1ecb5
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -22,4 +40,8 @@ gem 'angularjs-rails'
 # For generating the JSON for the API
 gem 'active_model_serializers'
 
+<<<<<<< HEAD
+=======
+# Turn off verbose logging of asset requests
+>>>>>>> 0066b905c63ce1a88ba1da566db6da7e46a1ecb5
 gem 'quiet_assets'
