@@ -42,6 +42,31 @@ angular.module('StoreFront').factory('productData',['$http', function($http){
             });
     }; // end of productData method
 
+    productData.createProduct = function(newProduct){
+        //Client-side data validation
+        if (newProduct.newProductTitle == '' || newProduct.newProductContents == '') {
+          alert('Neither the Title nor the Body are allowed to be left blank.');
+          return false;
+        };
+
+        data = {
+            new_product: {
+                title: newProduct.newProductTitle,
+                contents: newProduct.newProductContents
+            }
+        };
+
+        $http.post('./products.json', data)
+            .success(function(data){
+                productData.products.push(data);
+                console.log('Successfully created product')
+            })
+            .error(function(){
+                console.log('failed to create new product')
+            });
+        return true;
+    }
+
     return productData;
 }]);
 

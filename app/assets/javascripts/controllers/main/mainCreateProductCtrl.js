@@ -24,5 +24,14 @@ var CreateProductCtrl = function($scope, $location, $http, productData){
         $location.url('');
     };
 
+    $scope.createProduct = function(){
+        productData.createProduct($scope.formData)
+    }
+
+    $scope.clearPost = function() {
+        $scope.formData.newPostTitle = '';
+        $scope.formData.newPostContents = '';
+    }
+
     return productData;
 };
